@@ -1,0 +1,19 @@
+
+
+<div class="ui cards">
+ <% @customers.each do |customer| %>
+  <div class="card">
+    <div class="content">
+      <div class="header"><%= customer.customer_name %> <%= customer.customer_lastname %></div>
+      
+      <div class="meta"><%= customer.customer_uin %></div>
+      <div class="description">
+      <p>Correo: <%= customer.customer_email %></p> 
+      <p>Telefono: <%= customer.customer_phone %></p>
+         
+      </div>
+    </div>
+  </div>
+ <% end %>
+</div>
+

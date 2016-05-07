@@ -1,0 +1,54 @@
+<br><br><br><br><br><br>
+<%= form_for(@customer, remote: true, :html =>{:class => "ui form"})  do |f|  %>
+
+ <ul id="customers">
+
+</ul>
+
+ <div class="field">
+  
+    <%= f.label :Cedula %>
+    <%= f.text_field :customer_uin %>
+  </div>
+  <div class="field">
+  
+    <%= f.label :Nombre %>
+    <%= f.text_field :customer_name %>
+  </div>
+ 
+   <div class="field">
+  
+    <%= f.label :Apellido %>
+    <%= f.text_field :customer_lastname %>
+  </div>
+ 
+   <div class="field">
+  
+    <%= f.label :Email %>
+    <%= f.text_field :customer_email %>
+  </div>
+ 
+
+   <div class="field">
+  
+    <%= f.label :Telefono %>
+    <%= f.text_field :customer_phone %>
+  </div>
+
+  <p>
+     <%= f.submit %>
+
+  </p>
+<% end %>
+
+<div id="new_article"></div>
+
+    <script type="text/javascript">
+      $(document).ready ->
+  $("#new_article").on("ajax:success", (e, data, status, xhr) ->
+    $("#new_article").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#new_article").append "<p>ERROR</p>"
+
+    </script>
+
