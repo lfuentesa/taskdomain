@@ -12,6 +12,7 @@ class CustomersController < ApplicationController
 	end
 
 	def create 
+		Customer.find_by(customer_email: customer_email)
 		#render plain: params[:customer].inspect
 		@customer = Customer.new(customer_params)
 		respond_to do |format|

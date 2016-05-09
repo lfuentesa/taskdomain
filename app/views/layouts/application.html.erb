@@ -12,27 +12,29 @@
       <a href="#" class="header item">TaskDomain
       </a>
       <a href="" class="item">Inicio</a>
-      <div class="ui simple dropdown item">Acciones <i class="dropdown icon"></i>
+      <div class="ui simple dropdown item">Casos<i class="dropdown icon"></i>
         <div class="menu">
-          <div class="divider"></div>
-          <div class="header">Clientes</div>
-          <%= link_to 'Mostrar clientes', customers_path, class:  'item'%>
-        <%= link_to 'Crear cliente', new_customer_path, class:  'item'%>
+          
+          
+         
+          <%= link_to 'Crear caso', new_request_path, class:  'item'%>
+          <a class="item" href="#">Buscar caso</a>
+            <a class="item" href="#">Editar caso</a>
           <a class="item" href="#">Link Item</a>
-          <div class="divider"></div>
-          <div class="header">Reclamos</div>
-          <%= link_to 'Crear reclamo', new_claim_path, class:  'item'%>
-          <div class="item">
-            <i class="dropdown icon"></i>
-            Sub Menu
-            <div class="menu">
-              <a class="item" href="#">Link Item</a>
-              <a class="item" href="#">Link Item</a>
-            </div>
           </div>
-          <a class="item" href="#">Link Item</a>
-        </div>
+
+
       </div>
+
+  <div class="ui simple dropdown item">Reportes <i class="dropdown icon"></i>
+        <div class="menu">
+
+          <a class="item" href="#">Generar reporte</a>
+          </div>
+
+          
+      </div>
+
     </div>
   </div>
 

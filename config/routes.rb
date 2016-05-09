@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
 resources :claims
 resources :customers
+resources :requests
 
   # Example resource route with options:
   #   resources :products do
