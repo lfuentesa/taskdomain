@@ -3,11 +3,35 @@
 one:
   request_creator: 1
   request_insurance_broker: 1
-  request_license_plage: 1
+  request_license_plate: 1
   request_insurance_policy: 1
+  request_claim_number: 1
+  request_customer: 1
+  request_driver: 1
+  request_sinister_date: 2016-05-09
+  request_trial_date: 2016-05-09
+  request_format_number: 1
+  request_process_type: 1
+  request_district: 1
+  request_office: 
+  request_claimant: 1
+  request_log: 1
+  request_isactive: false
 
 two:
   request_creator: 1
   request_insurance_broker: 1
-  request_license_plage: 1
+  request_license_plate: 1
   request_insurance_policy: 1
+  request_claim_number: 1
+  request_customer: 1
+  request_driver: 1
+  request_sinister_date: 2016-05-09
+  request_trial_date: 2016-05-09
+  request_format_number: 1
+  request_process_type: 1
+  request_district: 1
+  request_office: 
+  request_claimant: 1
+  request_log: 1
+  request_isactive: false

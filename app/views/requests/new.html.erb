@@ -1,0 +1,102 @@
+
+<%= form_for(@request, remote: true, :html =>{:class => "ui form"})  do |f|  %>
+
+ <ul id="requests">
+
+</ul>
+
+ <div class="field">
+  
+    <%= f.label :"Corredor" %>
+    <%= f.text_field :request_insurance_broker %>
+  </div>
+  <div class="field">
+  
+    <%= f.label :"Placa" %>
+    <%= f.text_field :request_license_plate %>
+  </div>
+ 
+   <div class="field">
+  
+    <%= f.label :"Numero de Reclamo" %>
+    <%= f.text_field :request_claim_number %>
+  </div>
+ 
+   <div class="field">
+  
+    <%= f.label :"Fecha del siniestro" %>
+    <%= f.text_field :request_sinister_date %>
+  </div>
+ 
+
+   <div class="field">
+  
+    <%= f.label :"Fecha de la audiencia" %>
+    <%= f.text_field :request_trial_date %>
+  </div>
+
+   <div class="field">
+  
+    <%= f.label :"Numero de formato" %>
+    <%= f.text_field :request_trial_date %>
+  </div>
+
+
+   <div class="field">
+  
+    <%= f.label :"Numero de formato" %>
+    <%= f.text_field :request_format_number%>
+  </div>
+
+
+   <div class="field">
+  
+    <%= f.label :"Numero de proceso" %>
+    <%= f.text_field :request_process_type %>
+  </div>
+
+
+   <div class="field">
+  
+    <%= f.label :"Distrito" %>
+    <%= f.text_field :request_district %>
+  </div>
+
+   <div class="field">
+  
+    <%= f.label :"Oficina" %>
+    <%= f.text_field :request_office %>
+  </div>
+
+
+
+   <div class="field">
+  
+    <%= f.label :"Demandante" %>
+    <%= f.text_field :request_claimant %>
+  </div>
+
+
+
+
+
+
+
+
+  <p>
+     <%= f.submit %>
+
+  </p>
+
+
+  <div id="new_request"></div>
+
+    <script type="text/javascript">
+      $(document).ready ->
+  $("#new_request").on("ajax:success", (e, data, status, xhr) ->
+    $("#new_request").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#new_request").append "<p>ERROR</p>"
+
+    </script>
+  <% end %>

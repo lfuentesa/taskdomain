@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507014747) do
+ActiveRecord::Schema.define(version: 20160510030137) do
+
+  create_table "brokers", force: :cascade do |t|
+    t.string   "broker_company_name", limit: 255
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string   "customer_name",     limit: 255
@@ -21,6 +27,23 @@ ActiveRecord::Schema.define(version: 20160507014747) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.string   "customer_uin",      limit: 255
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "request_creator",          limit: 4
+    t.integer  "request_insurance_broker", limit: 4
+    t.integer  "request_license_plate",    limit: 4
+    t.integer  "request_claim_number",     limit: 4
+    t.date     "request_sinister_date"
+    t.date     "request_trial_date"
+    t.integer  "request_format_number",    limit: 4
+    t.integer  "request_process_type",     limit: 4
+    t.integer  "request_district",         limit: 4
+    t.integer  "request_office",           limit: 4
+    t.integer  "request_claimant",         limit: 4
+    t.boolean  "request_isactive"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
 end
