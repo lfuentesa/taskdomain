@@ -1,21 +1,30 @@
 
+
+
 <%= form_for(@request, remote: true, :html =>{:class => "ui form"})  do |f|  %>
 
  <ul id="requests">
 
 </ul>
 
+<h4 class="ui dividing header">Informacion del vehiculo</h4>
+
+<div class="fields">
  <div class="field">
   
     <%= f.label :"Corredor" %>
-    <%= f.text_field :request_insurance_broker %>
+<%= f.collection_select(:broker_id, Broker.all, :id, :broker_company_name) %>
+    
   </div>
   <div class="field">
   
     <%= f.label :"Placa" %>
     <%= f.text_field :request_license_plate %>
   </div>
- 
+ </div>
+
+
+
    <div class="field">
   
     <%= f.label :"Numero de Reclamo" %>
@@ -55,7 +64,8 @@
     <%= f.text_field :request_process_type %>
   </div>
 
-
+<h4 class="ui dividing header">Ubicacion</h4>
+<div class="fields">
    <div class="field">
   
     <%= f.label :"Distrito" %>
@@ -67,7 +77,7 @@
     <%= f.label :"Oficina" %>
     <%= f.text_field :request_office %>
   </div>
-
+</div>
 
 
    <div class="field">
