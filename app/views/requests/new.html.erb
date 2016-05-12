@@ -7,15 +7,18 @@
 
 </ul>
 
-<h4 class="ui dividing header">Informacion del vehiculo</h4>
+<h4 class="ui dividing header">Corredor y Vehiculo</h4>
 
-<div class="fields">
+  <div class="fields">
  <div class="field">
   
     <%= f.label :"Corredor" %>
 <%= f.collection_select(:id, Broker.all, :id, :broker_company_name) %>
     
   </div>
+
+
+
   <div class="field">
   
     <%= f.label :"Placa" %>
@@ -25,6 +28,15 @@
 
 
 
+
+
+
+
+
+<h4 class="ui dividing header">Siniestro</h4>
+
+  <div class="fields">
+ 
    <div class="field">
   
     <%= f.label :"Numero de Reclamo" %>
@@ -44,6 +56,7 @@
     <%= f.text_field :request_trial_date %>
   </div>
 
+</div>
    <div class="field">
   
     <%= f.label :"Numero de formato" %>
@@ -79,7 +92,7 @@
   </div>
 </div>
 
-
+<h4 class="ui dividing header">Corredor y Vehiculo</h4>
    <div class="field">
   
     <%= f.label :"Demandante" %>
@@ -110,15 +123,4 @@
 
     </script>
   <% end %>
-<div class="datepicker field">
-  <label>Date of Birth</label>
-  <input id="datepicker"></input>
-</div>
 
-
-<script type="text/javascript">
-  
-$(function() {
-  $('.datepicker').pickadate()
-});
-</script>
