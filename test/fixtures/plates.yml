@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plate_number: MyString
+  plate_description: MyString
+
+two:
+  plate_number: MyString
+  plate_description: MyString

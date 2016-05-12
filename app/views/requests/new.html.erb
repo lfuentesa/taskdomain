@@ -13,7 +13,7 @@
  <div class="field">
   
     <%= f.label :"Corredor" %>
-<%= f.collection_select(:broker_id, Broker.all, :id, :broker_company_name) %>
+<%= f.collection_select(:id, Broker.all, :id, :broker_company_name) %>
     
   </div>
   <div class="field">
@@ -110,3 +110,15 @@
 
     </script>
   <% end %>
+<div class="datepicker field">
+  <label>Date of Birth</label>
+  <input id="datepicker"></input>
+</div>
+
+
+<script type="text/javascript">
+  
+$(function() {
+  $('.datepicker').pickadate()
+});
+</script>

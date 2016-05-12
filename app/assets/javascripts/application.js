@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require semantic-ui
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time

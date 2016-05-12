@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # User this gem for Semantic UI
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
-gem 'semantic-datepicker-rails', github: 'jonatandahora/semantic-datepicker-rails'
+gem 'pickadate-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511022145) do
+ActiveRecord::Schema.define(version: 20160512002244) do
 
   create_table "brokers", force: :cascade do |t|
     t.string   "broker_company_name", limit: 255
@@ -29,9 +29,18 @@ ActiveRecord::Schema.define(version: 20160511022145) do
     t.string   "customer_uin",      limit: 255
   end
 
+  create_table "plates", force: :cascade do |t|
+    t.string   "plate_number",      limit: 255
+    t.string   "plate_description", limit: 255
+    t.integer  "broker_id",         limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "plates", ["broker_id"], name: "index_plates_on_broker_id", using: :btree
+
   create_table "requests", force: :cascade do |t|
     t.integer  "request_creator",       limit: 4
-    t.integer  "broker_id",             limit: 4
     t.integer  "request_license_plate", limit: 4
     t.integer  "request_claim_number",  limit: 4
     t.date     "request_sinister_date"
